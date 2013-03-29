@@ -15,7 +15,7 @@
              (pmap get-files)
              flatten
              (pmap (memfn getName))
-             (filter #(comp not nil? (partial re-find regex %))))))
+             (filter (comp not nil? (partial re-find regex))))))
 
 (defn usage []
   (println "Usage: $ run.sh file_name path"))
